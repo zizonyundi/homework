@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+              rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous">
+        </script>
+        <style>
+            p, h1 {
+                font-family: 'Noto Sans KR', sans-serif;
+                display: inline-block;
+            }
+
+            .wrap {
+                width: 600px;
+                height: 600px;
+                margin: auto;
+            }
+
+            .wrap img {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <img src="img/moreng.jpg">
+            <h1>머랭이는 안팝니다</h1>
+            <p>가격 : 1,000,000,000,000,000원/마리</p>
+            <p>저희 강아지를 보셨나요?<br>안보셨다면 지금 보세요.<br>파는 건 아니고 그냥 자랑하려고 올립니다.</p>
+
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">주문자 이름 </span>
+                </div>
+                <input id="order-name" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="order-count">수량 </label>
+                </div>
+                <select class="custom-select" id="order-count">
+                    <option selected value="">수량 입력</option>
+                    <option value="1">1 마리</option>
+                    <option value="2">2 마리</option>
+                    <option value="3">3 마리</option>
+                </select>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">주소</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">전화번호 </span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <button onclick="javascript:btn()" type="button" class="btn btn-primary" style="margin: 0 auto;">주문하기
+            </button>
+        </div>
+
+
+        <script>
+            function btn() {
+                let orderName = $('#order-name').val();
+                let orderNumber = $('#order-count').val();
+                console.log(orderNumber);
+
+                if (orderName == '') {
+                    alert('이름을 입력해주세요!');
+
+                } else if (orderNumber == '') {
+                    alert('수량을입력해주세요!');
+
+                } else {
+                    alert('@morengstagram을 팔로우하세요!');
+
+                }
+
+
+            }
+
+
+        </script>
+    </body>
+</html>
